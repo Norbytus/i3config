@@ -64,13 +64,13 @@ set $home /home/alex/.config/i3/
 # Клавиша windows
 set $mod Mod4
 # l
-set $up 46
+set $up 45
 # k
-set $down 45
+set $down 44
 # j
-set $left 44
+set $left 46
 # ;
-set $right 47
+set $right 43
 
 # воркспейсы
 set $ws1 1:
@@ -147,7 +147,7 @@ bindcode $mod+Shift+$up move up
 bindcode $mod+Shift+$right move right
 
 # Разбить окно по горизонтали Mod + h
-bindcode $mod+43 split h
+bindcode $mod+42 split h
 
 # Разбить окно по вертикали Mod + v
 bindcode $mod+55 split v
@@ -297,6 +297,8 @@ mode "resize" {
 # Раскидываем по воркспейсам
 
 assign [class="(?i)ktorrent"] → $ws2
+assign [class="(?i)telegram"] → $ws2
+assign [class="(?i)slack"] → $ws2
 
 assign [class="(?i)firefox"] → $ws3
 
@@ -308,6 +310,7 @@ assign [class="(?i)ristretto"] → $ws6
 assign [class="(?i)gwenview"] → $ws6
 assign [class="(?i)okular"] → $ws6
 assign [class="(?i)ranger"] → $ws6
+assign [class="(?i)zeal"] → $ws6
 
 assign [class="(?i)libreoffice"] → $ws7
 
@@ -316,6 +319,7 @@ assign [class="(?i)inkscape"] → $ws8
 assign [class="(?i)blender"] → $ws8
 
 assign [class="(?i)nitrogen"] → $ws10
+exec --no-startup-id i3-msg 'workspace 3:Web; exec /usr/bin/firefox'
 
 
 #--------------------------------------
